@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML & CSS Responsive Design Test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --surface: #ffffff;
+      --text: #1b1f2e;
+      --muted: #596075;
+      --line: #dfe3ee;
+      --accent: #2a47d1;
+      --accent-soft: #e6ebfd;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      line-height: 1.75;
+    }
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+    h1, h2 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0;
+    }
+    h1 { font-size: 34px; }
+    .subtitle {
+      color: var(--muted);
+      font-size: 17px;
+      margin: 10px 0 0;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--line);
+      margin: 28px 0 40px;
+    }
+    .lead {
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+    .lead span { color: var(--accent); }
+    p { margin: 0 0 16px; color: var(--muted); font-size: 17px; }
+    p strong { color: var(--text); font-weight: 600; }
+
+    .card {
+      background-color: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px 20px;
+      margin-top: 28px;
+    }
+    .card h2 { font-size: 22px; margin-bottom: 16px; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
+    .chip {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      background-color: var(--accent-soft);
+      border-radius: 8px;
+      padding: 6px 14px;
+      line-height: 1.5;
+    }
+    .group-label {
+      font-weight: 600;
+      color: var(--text);
+      margin: 22px 0 10px;
+      font-size: 16px;
+    }
+    .group-label:first-of-type { margin-top: 0; }
+
+    .design { margin-top: 12px; }
+    .design img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background-color: #fff;
+    }
+    .design.small img { max-width: 350px; }
+
+    ul { margin: 0; padding-left: 22px; }
+    li { color: var(--muted); font-size: 17px; margin-bottom: 8px; }
+    li::marker { color: var(--accent); }
+    code {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 14px;
+      color: var(--accent);
+      background-color: var(--accent-soft);
+      border-radius: 5px;
+      padding: 2px 7px;
+    }
+    a { color: var(--accent); word-break: break-all; }
+
+    .note {
+      border-left: 4px solid var(--accent);
+      background-color: var(--accent-soft);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+    }
+    .note li { color: var(--text); }
+    .note li:last-child { margin-bottom: 0; }
+
+    @media (min-width: 576px) {
+      .page { padding: 56px 32px 80px; }
+      h1 { font-size: 44px; }
+      .lead { font-size: 34px; }
+      .card { padding: 32px; }
+    }
+    @media (min-width: 768px) {
+      h1 { font-size: 52px; }
+      .lead { font-size: 38px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>Test &mdash; HTML &amp; CSS Responsive Design</h1>
+      <p class="subtitle">Apply what you've learned about Flexbox and media queries to build a responsive page.</p>
+    </header>
+    <hr />
+
+    <section>
+      <h2 class="lead">In this test, build a <span>Move Messenger</span>.</h2>
+      <p>
+        Build a <strong>Move Messenger</strong> section by applying the CSS concepts we learned till now.
+        The following images illustrate all device sizes, from extra small to extra large.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Device sizes</h2>
+
+      <p class="group-label">Extra Small and Small</p>
+      <div class="chips">
+        <span class="chip">Extra Small &lt; 576px</span>
+        <span class="chip">Small &ge; 576px</span>
+      </div>
+      <div class="design small">
+        <img
+          src="https://res.cloudinary.com/dsf2gec5l/image/upload/v1792895430/image_2026-10-25_080029081_xesiak.png"
+          alt="Move Messenger design for extra small and small devices"
+          referrerpolicy="no-referrer"
+          onerror="this.outerHTML='&lt;a href=&quot;https://res.cloudinary.com/dsf2gec5l/image/upload/v1792895430/image_2026-10-25_080029081_xesiak.png&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Open the small devices design&lt;/a&gt;'"
+        />
+      </div>
+
+      <p class="group-label">Medium, Large and Extra Large</p>
+      <div class="chips">
+        <span class="chip">Medium &ge; 768px</span>
+        <span class="chip">Large &ge; 992px</span>
+        <span class="chip">Extra Large &ge; 1200px</span>
+      </div>
+      <div class="design">
+        <img
+          src="https://res.cloudinary.com/dsf2gec5l/image/upload/v1792895443/image_2026-10-25_080041572_lrgp7j.png"
+          alt="Move Messenger design for medium, large and extra large devices"
+          referrerpolicy="no-referrer"
+          onerror="this.outerHTML='&lt;a href=&quot;https://res.cloudinary.com/dsf2gec5l/image/upload/v1792895443/image_2026-10-25_080041572_lrgp7j.png&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Open the medium devices design&lt;/a&gt;'"
+        />
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Instructions</h2>
+      <ul>
+        <li>The page should have image on the right in devices equals to and above <code>768px</code></li>
+        <li>The page should have image on the top in devices below <code>768px</code></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Note</h2>
+      <div class="note">
+        <ul>
+          <li>Achieve the design using the CSS Flexbox layout and media queries.</li>
+          <li>Try to achieve the design as close as possible.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Resources</h2>
+      <ul>
+        <li>
+          <a href="https://res.cloudinary.com/dsf2gec5l/image/upload/v1792895667/image_2026-10-25_080424070_xgtuoj.png" target="_blank" rel="noopener">
+            https://res.cloudinary.com/dsf2gec5l/image/upload/v1792895667/image_2026-10-25_080424070_xgtuoj.png
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
